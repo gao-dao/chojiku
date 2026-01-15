@@ -83,3 +83,39 @@ li {
     margin-top: 15px;
     display: block;
 }
+
+/* --- スケジュールページ用の追加設定 --- */
+
+/* 各日程の枠 */
+.schedule-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 日付を強調 */
+.schedule-item strong {
+    color: #e67e22; /* h3と同じオレンジ色で統一感を出します */
+    font-size: 1.1rem;
+}
+
+/* 戻るボタンの装飾 */
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #f1f4f8;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #dcdfe6;
+}
+
+.back-link:hover {
+    background-color: #e2e6ea;
+    color: #3498db;
+}
