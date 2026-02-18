@@ -1,178 +1,300 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>講習内容例 - 調軸講習会</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e67e22',
+                        secondary: '#2c3e50',
+                        light: '#f9f9f9',
+                        accent: '#3498db',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
     <style>
-        h2 { margin-top: 2rem; }
-        .text-orange { color: #e67e22; }
-        .strong-point { color: #2c3e50; font-weight: bold; display: block; margin-top: 1rem; }
-        html { scroll-behavior: smooth; }
-        .nav-link-custom { color: #666; text-decoration: none; font-size: 0.9rem; font-weight: bold; }
-        .nav-link-custom:hover { color: #0d6efd; text-decoration: underline; }
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        /* Custom scrollbar offset for sticky headers if needed, using scroll-margin-top */
+        section {
+            scroll-margin-top: 2rem;
+        }
     </style>
 </head>
-<body class="bg-light">
 
-<div class="container my-5 p-4 p-md-5 bg-white shadow-sm rounded">
-    <header class="text-center mb-5">
-        <h1 class="display-5 fw-bold text-dark border-bottom pb-3 mb-4">講習内容のご案内</h1>
-        <div class="d-grid gap-2 d-md-block">
-            <a href="index.html" class="btn btn-outline-secondary px-4 me-md-2">← トップへ戻る</a>
-            <a href="schedule.html" class="btn btn-primary px-4 shadow-sm fw-bold">📅 スケジュールを見る</a>
-        </div>
-    </header>
+<body class="text-gray-700 antialiased">
 
-    <div class="text-center my-4">
-        <img src="images/1g.jpg" alt="調軸の身体操作イメージ" class="img-fluid rounded shadow-sm" style="max-height: 400px;">
-        <p class="text-muted small mt-2">体がふわっと軽くなる1Gの秘密</p>
-    </div>
+    <div class="max-w-5xl mx-auto my-10 px-4 sm:px-6 lg:px-8">
 
-    <div class="bg-light p-3 rounded mb-5 border">
-        <p class="small fw-bold mb-2 text-center text-muted">クイックメニュー</p>
-        <div class="row g-2 text-center">
-            <div class="col-6 col-md-4"><a href="#section1" class="nav-link-custom">1. 基本構成</a></div>
-            <div class="col-6 col-md-4"><a href="#section2" class="nav-link-custom">2. 介護医療</a></div>
-            <div class="col-6 col-md-4"><a href="#section3" class="nav-link-custom">3. 教育団体</a></div>
-            <div class="col-6 col-md-4"><a href="#section4" class="nav-link-custom">4. スポーツ</a></div>
-            <div class="col-6 col-md-4"><a href="#section5" class="nav-link-custom">5. シニア</a></div>
-            <div class="col-6 col-md-4"><a href="#section6" class="nav-link-custom">6. 表現力を磨く</a></div>
-        </div>
-    </div>
+        <!-- Header Card -->
+        <header class="bg-white shadow-xl rounded-2xl p-8 mb-10 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-orange-400"></div>
+            <h1 class="text-3xl md:text-5xl font-bold text-secondary mb-6 relative z-10">講習内容のご案内</h1>
 
-    <section id="section1" class="mb-5">
-        <h2 class="h3 border-start border-primary border-5 ps-3 mb-3 py-2 bg-light">1. 基本的な構成</h2>
-        <h3 class="h5 text-orange mb-3">テーマ：「自己調整と連動性の体感ワーク」</h3>
-        <div class="ms-md-3">
-            <span class="strong-point">身体認識と調整力を養う</span>
-             <ul>
-                <li><strong>姿勢ワーク：</strong>力を抜いて楽に立つ。座る。リラックスした状態に自分で気づけるようになる。</li>
-                <li><strong>脱力ワーク：</strong>脱力を通じて反応・回避力を高める</li>
-            </ul>
-            <span class="strong-point">他者との協調とレジリエンシー</span>
-            <ul>
-                <li>ぶつからない力・衝突しない力の伝え方</li>
-                <li>触れるワーク：相手の力を感じ、受け止める</li>
-                <li>グループワーク：動きが伝わる、繋がるを体感</li>
-                <li>イメージワーク：ポジティブ感情とパフォーマンスの関係</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="section2" class="mb-5">
-        <h2 class="h3 border-start border-primary border-5 ps-3 mb-3 py-2 bg-light">2. 介護医療事業者様</h2>
-        <h3 class="h5 text-orange mb-3">テーマ：「相手を壊さず、壊れない介助の身体感覚」</h3>
-        <div class="ms-md-3">
-            <span class="strong-point">余計な力を抜きながら動ける身体を体感する</span>
-            <ul>
-                <li><strong>姿勢＆重心：</strong>骨で立ち、力まない体へ</li>
-                <li><strong>股関節で動く：</strong>膝や腰への負担軽減</li>
-            </ul>
-            <span class="strong-point">対人操作と介助動作</span>
-            <ul>
-                <li><strong>触れるワーク：</strong>優しく触れて伝える力</li>
-                <li><strong>イメージと目線：</strong>介助中の安心感づくり</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="section3" class="mb-5">
-        <h2 class="h3 border-start border-primary border-5 ps-3 mb-3 py-2 bg-light">3. 教育団体様</h2>
-        <h3 class="h5 text-orange mb-3">テーマ：「転んでも立ち上がる心と体の育て方」</h3>
-        <div class="ms-md-3">
-            <ul>
-                <li>姿勢・股関節：自分を整える</li>
-                <li>転がる練習：失敗を怖がらない身体習慣</li>
-                <li>背伸び・欠伸体操：ストレスケアと活力</li>
-            </ul>
-            <span class="strong-point">心と体をつなげる</span>
-            <ul>
-                <li>イメージワーク：ポジティブ感情で力が変わる体験</li>
-                <li>グループワーク：皆で一つの動きをつくる</li>
-                <li>やさしいタッチワーク：つながりを育てる</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="section4" class="mb-5">
-        <h2 class="h3 border-start border-primary border-5 ps-3 mb-3 py-2 bg-light">4. スポーツ競技者様</h2>
-        <h3 class="h5 text-orange mb-3">テーマ：「力を抜いて力を出す。動きの質を高める」</h3>
-        <div class="ms-md-3">
-            <ul>
-                <li>股関節・背骨ワーク：全身の連動を獲得</li>
-                <li>脱力ワーク：過分な緊張を抜き、素早く反応・移動できる身体操作。</li>
-                <li>同時等速運動：スムーズな重心移動</li>
-            </ul>
-            <span class="strong-point">競技動作への応用</span>
-            <ul>
-                <li>武術的崩しワーク：1対1の駆け引きに強くなる</li>
-                <li>波運動：背骨とリズムでプレーに変化をつける</li>
-                <li>ナイフワーク応用：動的バランスに必要な身体感覚</li>
-                <li>競技別ドリルへのフィードバックセッション</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="section5" class="mb-5">
-        <h2 class="h3 border-start border-primary border-5 ps-3 mb-3 py-2 bg-light">5. シニアの皆様</h2>
-        <h3 class="h5 text-orange mb-3">テーマ：「転びそうになっても戻れる体へ」</h3>
-        <div class="ms-md-3">
-            <ul>
-                <li>姿勢＆股関節のワーク：無理なく立ち続ける体</li>
-                <li>転がる練習：安心して動ける身体習慣</li>
-                <li>背伸び・欠伸体操：ストレスケアと活力</li>
-                <li>姿勢＆重心：山歩きが楽になる歩き方</li>
-            </ul>
-            <span class="strong-point">楽しく生きる体”感”づくり</span>
-            <ul>
-                <li>お辞儀・正座動作：日常動作に潜む知恵を再発見</li>
-                <li>グループでの背骨体操：他者と動きを共有</li>
-                <li>「楽しいから動く」体づくり</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="section6" class="mb-0 pb-3">
-        <h2 class="h3 border-start border-primary border-5 ps-3 mb-3 py-2 bg-light">6. 表現力を磨く</h2>
-        <h3 class="h5 text-orange mb-3">テーマ：「動きと感情の境界線を越える身体」</h3>
-        <div class="ms-md-3">
-            <ul>
-                <li>脱力の探求：不要な緊張を取り除く</li>
-                <li>背骨の意識：情動の源としての脊柱</li>
-                <li>感情と呼吸</li>
-            </ul>
-            <span class="strong-point">相手との関係性</span>
-            <ul>
-                <li>合気上げ・合気下げ：意識の通った動き</li>
-                <li>触れるワーク：相手の気配を捉える</li>
-                <li>姿勢と空間認識：インクルーシブな空間を作る</li>
-            </ul>
-        </div>
-    </section>
-
-</div> <footer class="mt-5">
-    <div class="container pb-5 text-center">
-        <div class="contact p-4 p-md-5 rounded border border-warning shadow-sm" style="background-color: #fff4e6;">
-            <h2 class="h5 fw-bold mb-4">お問い合わせ・ご相談</h2>
-            <p class="mb-3">ご興味がありましたら、以下の連絡先までお気軽にご相談ください。</p>
-            <div class="h4 mb-4">
-                <a href="mailto:kenzizie@gmail.com" class="text-decoration-none fw-bold text-primary">kenzizie@gmail.com</a>
-            </div>
-            <div class="mb-4">
-                <a href="https://www.instagram.com/be.fitness_kumamoto/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger px-4 shadow-sm fw-bold">
-                    Instagramはこちら
+            <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+                <a href="index.html"
+                    class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+                    ← トップへ戻る
+                </a>
+                <a href="schedule.html"
+                    class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-orange-600 shadow-lg transition-transform transform hover:scale-105">
+                    📅 スケジュールを見る
                 </a>
             </div>
-            <p class="small text-muted mb-0">テーマに沿った体験会をワークショップ形式でやらせていただきます。</p>
-            <hr class="my-4 border-secondary opacity-25">
-            <p class="small text-secondary mb-0">&copy; 2026 調軸講習会 All Rights Reserved.</p>
-        </div>
-    </div>
-</footer>
+        </header>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Hero Image Card -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden mb-10">
+            <img src="images/1g.jpg" alt="調軸の身体操作イメージ" class="w-full h-64 md:h-96 object-cover">
+            <div class="p-4 text-center bg-gray-50 border-t border-gray-100">
+                <p class="text-secondary font-medium">体がふわっと軽くなる1Gの秘密</p>
+            </div>
+        </div>
+
+        <!-- Quick Menu -->
+        <div class="bg-white shadow-md rounded-xl p-6 mb-12 border border-blue-50">
+            <p class="text-sm font-bold text-center text-gray-400 uppercase tracking-widest mb-4">Quick Menu</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="#section1"
+                    class="block p-3 text-center rounded-lg bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-accent font-bold transition-colors border border-transparent hover:border-blue-200">1.
+                    基本構成</a>
+                <a href="#section2"
+                    class="block p-3 text-center rounded-lg bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-accent font-bold transition-colors border border-transparent hover:border-blue-200">2.
+                    介護医療</a>
+                <a href="#section3"
+                    class="block p-3 text-center rounded-lg bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-accent font-bold transition-colors border border-transparent hover:border-blue-200">3.
+                    教育団体</a>
+                <a href="#section4"
+                    class="block p-3 text-center rounded-lg bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-accent font-bold transition-colors border border-transparent hover:border-blue-200">4.
+                    スポーツ</a>
+                <a href="#section5"
+                    class="block p-3 text-center rounded-lg bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-accent font-bold transition-colors border border-transparent hover:border-blue-200">5.
+                    シニア</a>
+                <a href="#section6"
+                    class="block p-3 text-center rounded-lg bg-gray-50 hover:bg-blue-50 text-gray-600 hover:text-accent font-bold transition-colors border border-transparent hover:border-blue-200">6.
+                    表現力を磨く</a>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="space-y-10">
+
+            <!-- Section 1 -->
+            <section id="section1" class="bg-white shadow-xl rounded-2xl p-8 border-l-8 border-primary relative">
+                <h2 class="text-2xl font-bold text-secondary mb-4 flex items-center">
+                    <span
+                        class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg shadow-sm">1</span>
+                    基本的な構成
+                </h2>
+                <h3
+                    class="text-xl text-primary font-semibold mb-6 border-b border-dashed border-orange-200 pb-2 inline-block">
+                    テーマ：「自己調整と連動性の体感ワーク」
+                </h3>
+                <div class="ml-2 md:ml-4 space-y-6">
+                    <div>
+                        <span class="block text-secondary font-bold mb-2">身体認識と調整力を養う</span>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                            <li><strong>姿勢ワーク：</strong>力を抜いて楽に立つ。座る。リラックスした状態に自分で気づけるようになる。</li>
+                            <li><strong>脱力ワーク：</strong>脱力を通じて反応・回避力を高める</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="block text-secondary font-bold mb-2">他者との協調とレジリエンシー</span>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                            <li>ぶつからない力・衝突しない力の伝え方</li>
+                            <li>触れるワーク：相手の力を感じ、受け止める</li>
+                            <li>グループワーク：動きが伝わる、繋がるを体感</li>
+                            <li>イメージワーク：ポジティブ感情とパフォーマンスの関係</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="section2" class="bg-white shadow-xl rounded-2xl p-8 border-l-8 border-primary">
+                <h2 class="text-2xl font-bold text-secondary mb-4 flex items-center">
+                    <span
+                        class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg shadow-sm">2</span>
+                    介護医療事業者様
+                </h2>
+                <h3
+                    class="text-xl text-primary font-semibold mb-6 border-b border-dashed border-orange-200 pb-2 inline-block">
+                    テーマ：「相手を壊さず、壊れない介助の身体感覚」
+                </h3>
+                <div class="ml-2 md:ml-4 space-y-6">
+                    <div>
+                        <span class="block text-secondary font-bold mb-2">余計な力を抜きながら動ける身体を体感する</span>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                            <li><strong>姿勢＆重心：</strong>骨で立ち、力まない体へ</li>
+                            <li><strong>股関節で動く：</strong>膝や腰への負担軽減</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="block text-secondary font-bold mb-2">対人操作と介助動作</span>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                            <li><strong>触れるワーク：</strong>優しく触れて伝える力</li>
+                            <li><strong>イメージと目線：</strong>介助中の安心感づくり</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="section3" class="bg-white shadow-xl rounded-2xl p-8 border-l-8 border-primary">
+                <h2 class="text-2xl font-bold text-secondary mb-4 flex items-center">
+                    <span
+                        class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg shadow-sm">3</span>
+                    教育団体様
+                </h2>
+                <h3
+                    class="text-xl text-primary font-semibold mb-6 border-b border-dashed border-orange-200 pb-2 inline-block">
+                    テーマ：「転んでも立ち上がる心と体の育て方」
+                </h3>
+                <div class="ml-2 md:ml-4 space-y-6">
+                    <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                        <li>姿勢・股関節：自分を整える</li>
+                        <li>転がる練習：失敗を怖がらない身体習慣</li>
+                        <li>背伸び・欠伸体操：ストレスケアと活力</li>
+                    </ul>
+                    <div>
+                        <span class="block text-secondary font-bold mb-2">心と体をつなげる</span>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                            <li>イメージワーク：ポジティブ感情で力が変わる体験</li>
+                            <li>グループワーク：皆で一つの動きをつくる</li>
+                            <li>やさしいタッチワーク：つながりを育てる</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="section4" class="bg-white shadow-xl rounded-2xl p-8 border-l-8 border-primary">
+                <h2 class="text-2xl font-bold text-secondary mb-4 flex items-center">
+                    <span
+                        class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg shadow-sm">4</span>
+                    スポーツ競技者様
+                </h2>
+                <h3
+                    class="text-xl text-primary font-semibold mb-6 border-b border-dashed border-orange-200 pb-2 inline-block">
+                    テーマ：「力を抜いて力を出す。動きの質を高める」
+                </h3>
+                <div class="ml-2 md:ml-4 space-y-6">
+                    <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                        <li>股関節・背骨ワーク：全身の連動を獲得</li>
+                        <li>脱力ワーク：過分な緊張を抜き、素早く反応・移動できる身体操作。</li>
+                        <li>同時等速運動：スムーズな重心移動</li>
+                    </ul>
+                    <div>
+                        <span class="block text-secondary font-bold mb-2">競技動作への応用</span>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                            <li>武術的崩しワーク：1対1の駆け引きに強くなる</li>
+                            <li>波運動：背骨とリズムでプレーに変化をつける</li>
+                            <li>ナイフワーク応用：動的バランスに必要な身体感覚</li>
+                            <li>競技別ドリルへのフィードバックセッション</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="section5" class="bg-white shadow-xl rounded-2xl p-8 border-l-8 border-primary">
+                <h2 class="text-2xl font-bold text-secondary mb-4 flex items-center">
+                    <span
+                        class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg shadow-sm">5</span>
+                    シニアの皆様
+                </h2>
+                <h3
+                    class="text-xl text-primary font-semibold mb-6 border-b border-dashed border-orange-200 pb-2 inline-block">
+                    テーマ：「転びそうになっても戻れる体へ」
+                </h3>
+                <div class="ml-2 md:ml-4 space-y-6">
+                    <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                        <li>姿勢＆股関節のワーク：無理なく立ち続ける体</li>
+                        <li>転がる練習：安心して動ける身体習慣</li>
+                        <li>背伸び・欠伸体操：ストレスケアと活力</li>
+                        <li>姿勢＆重心：山歩きが楽になる歩き方</li>
+                    </ul>
+                    <div>
+                        <span class="block text-secondary font-bold mb-2">楽しく生きる体”感”づくり</span>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                            <li>お辞儀・正座動作：日常動作に潜む知恵を再発見</li>
+                            <li>グループでの背骨体操：他者と動きを共有</li>
+                            <li>「楽しいから動く」体づくり</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="section6" class="bg-white shadow-xl rounded-2xl p-8 border-l-8 border-primary mb-12">
+                <h2 class="text-2xl font-bold text-secondary mb-4 flex items-center">
+                    <span
+                        class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-lg shadow-sm">6</span>
+                    表現力を磨く
+                </h2>
+                <h3
+                    class="text-xl text-primary font-semibold mb-6 border-b border-dashed border-orange-200 pb-2 inline-block">
+                    テーマ：「動きと感情の境界線を越える身体」
+                </h3>
+                <div class="ml-2 md:ml-4 space-y-6">
+                    <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                        <li>脱力の探求：不要な緊張を取り除く</li>
+                        <li>背骨の意識：情動の源としての脊柱</li>
+                        <li>感情と呼吸</li>
+                    </ul>
+                    <div>
+                        <span class="block text-secondary font-bold mb-2">相手との関係性</span>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600 bg-orange-50 p-4 rounded-lg">
+                            <li>合気上げ・合気下げ：意識の通った動き</li>
+                            <li>触れるワーク：相手の気配を捉える</li>
+                            <li>姿勢と空間認識：インクルーシブな空間を作る</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-10 mb-10">
+            <div class="bg-orange-50 border border-orange-200 rounded-2xl p-8 md:p-10 text-center shadow-lg">
+                <h2 class="text-2xl font-bold text-secondary mb-4">お問い合わせ・ご相談</h2>
+                <p class="text-gray-600 mb-6">
+                    ご興味がありましたら、以下の連絡先までお気軽にご相談ください。
+                </p>
+                <div class="text-xl md:text-2xl font-bold mb-6">
+                    <a href="mailto:kenzizie@gmail.com"
+                        class="text-primary hover:text-orange-600 transition-colors">kenzizie@gmail.com</a>
+                </div>
+                <div class="mb-8">
+                    <a href="https://www.instagram.com/be.fitness_kumamoto/" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 shadow-md transition-all transform hover:-translate-y-1">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.027 2 12.315 2zm-4.731 1.95c-.37.195-.595.39-.738.533-.143.143-.341.385-.536.755C5.965 5.92 5.86 6.806 5.83 9.176c-.029 2.302-.016 2.643.03 2.85.08.368.16.59.255.753.05.085.105.166.166.243.19.231.428.423.693.56.33.17.653.257 1.025.275 2.368.106 2.71.094 5.013.065 2.37-.03 2.642-.015 2.85.03.368.08.59.16.753.255.085.05.166.105.243.166.231.19.423.428.56.693.17.33.257.653.275 1.025.275 2.368.106 2.71.094 5.013.065 2.37-.03 2.642-.015 2.85.03.368.08.59.16.753.255.085.05.166.105.243.166.231.19.423.428.56.693.17.33.257.653.275 1.025.106 2.368.094 2.71.065 5.013.03 2.37.015 2.642-.03 2.85-.08.368-.16.59-.255.753-.05.085-.105.166-.166.243-.19.231-.428.423-.693.56-.33.17-.653.257-1.025.275zm-1.077-9.423a1.44 1.44 0 112.879 0 1.44 1.44 0 01-2.879 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Instagramはこちら
+                    </a>
+                </div>
+                <p class="text-sm text-gray-400 mb-0">テーマに沿った体験会をワークショップ形式でやらせていただきます。</p>
+                <hr class="border-orange-200 my-6">
+                <p class="text-xs text-gray-400">&copy; 2026 調軸講習会 All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>

@@ -1,90 +1,11 @@
 @charset "UTF-8";
 
-/* --- Bootstrapとの競合回避と基本設定 --- */
+/* 
+   Tailwind CSS導入に伴い、大部分のスタイルはHTML内のユーティリティクラスに移行しました。
+   ここにはグローバルなフォント設定などの共通設定のみを残しています。
+*/
+
 body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    line-height: 1.8;
     color: #333;
-    /* max-width と margin: 0 auto は削除（Bootstrapのcontainerに任せるため） */
-    background-color: #f9f9f9;
-}
-
-/* Bootstrapの .container をさらに装飾する場合 */
-.container {
-    background-color: #fff;
-    /* paddingはBootstrapのクラス(p-4等)と併用するため微調整 */
-    border-radius: 8px;
-}
-
-/* --- 見出しの装飾（あなたのデザインを継承） --- */
-h1 {
-    color: #2c3e50;
-    /* font-sizeはBootstrapのdisplayクラスを使う場合は不要ですが、予備として残します */
-}
-
-h2 {
-    background-color: #f1f4f8;
-    color: #2c3e50;
-    padding: 10px 15px;
-    margin-top: 40px;
-    font-size: 1.3rem;
-    line-height: 1.4;
-}
-
-h3 {
-    color: #e67e22;
-    font-size: 1.1rem;
-    margin-top: 20px;
-    border-bottom: 1px dashed #e67e22;
-    display: inline-block;
-}
-
-/* --- コンテンツ要素 --- */
-.lead-text {
-    font-size: 1.1rem;
-    background-color: #fffaf0;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ffe4b5;
-}
-
-.strong-point {
-    font-weight: bold;
-    color: #2c3e50;
-    margin-top: 15px;
-    display: block;
-}
-
-/* --- スケジュールページ用の追加設定 --- */
-.schedule-item {
-    background: #fff;
-    border: 1px solid #ddd !important; /* Bootstrapのボーダーより優先 */
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.schedule-item strong {
-    color: #e67e22;
-    font-size: 1.1rem;
-}
-
-/* --- 戻るボタン（Bootstrapのボタンを使わない場合用） --- */
-.back-link {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 20px;
-    background-color: #f1f4f8;
-    color: #2c3e50;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    border: 1px solid #dcdfe6;
-    transition: all 0.3s ease;
-}
-
-.back-link:hover {
-    background-color: #e2e6ea;
-    color: #3498db;
 }
